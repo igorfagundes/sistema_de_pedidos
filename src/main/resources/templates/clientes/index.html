@@ -5,6 +5,31 @@
     <title>Index</title>
 </head>
 <body>
-    
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <h1>CLIENTE</h1>
+                            <th scope="col">ID</th>
+                            <th scope="col">NOME</th>
+                            <th scope="col">TELEFONE</th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="cliente : ${clientes}">
+                            <th class="col-1" scope="row" th:text="${cliente.getId()}">ID</th>
+                            <td class="col-4" th:text="${cliente.nome}">NOME DO CLIENTE</td>
+                            <td class="col-2" th:text="${cliente.telefone}">TELEFONE</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
